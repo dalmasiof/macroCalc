@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { MacrosController } from "../controllers/macroController";
+import { MacrosController } from "../controllers/MacroController";
 
 const macroRoutes = Router();
 const macroCtrl = new MacrosController();
