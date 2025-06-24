@@ -7,6 +7,8 @@ import routes from './routes';
 
 const app = express();
 
+app.use(express.json());
+
 // Middlewares globais
 // app.use(helmet());
 // app.use(cors());
@@ -15,6 +17,7 @@ const app = express();
 
 // Rotas
 app.use('/api', routes);
+
 
 // Middleware de tratamento de erros
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {

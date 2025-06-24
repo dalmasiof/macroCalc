@@ -10,7 +10,13 @@ export class MacrosController{
         let macrosService = new MacrosService();
         let result = macrosService.generateMacros(dto.Weigth, dto.Goal);
 
-        res.status(200).json(result);
+        if(result == null){
+            res.status(503).json("Goal undefined")
+        }
+        else{
+            res.status(200).json(result);
+        }
+
     }
 
 }
