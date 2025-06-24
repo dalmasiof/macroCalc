@@ -4,7 +4,6 @@ import { IMCController } from '../controllers/IMCController';
 const imcRoutes = Router();
 const imcController = new IMCController();
 
-imcRoutes.post('/calculate', imcController.calculate);
-imcRoutes.post('/teste', imcController.teste);
+imcRoutes.post('/', imcController.calculate);
 
 export default imcRoutes;
